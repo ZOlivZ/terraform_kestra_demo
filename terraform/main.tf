@@ -13,7 +13,7 @@ resource "docker_image" "postgres" {
 
 resource "docker_container" "postgres" {
   name  = "kestra_pg"
-  image = docker_image.postgres.latest
+  image = docker_image.postgres.name
   ports {
     internal = 5432
     external = 5432
@@ -31,7 +31,7 @@ resource "docker_image" "minio" {
 
 resource "docker_container" "minio" {
   name  = "kestra_minio"
-  image = docker_image.minio.latest
+  image = docker_image.minio.name
   ports {
     internal = 9000
     external = 9000
