@@ -1,0 +1,5 @@
+postgres_user     = "admin"
+postgres_password = "admin123"
+postgres_db       = "kestra_demo"
+minio_user        = "minioadmin"
+minio_password    = "minioadmin"
