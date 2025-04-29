@@ -1,5 +1,11 @@
-provider "docker" {}
-
+terraform {
+  required_providers {
+    docker = {
+      source  = "hashicorp/docker"
+      version = "~> 3.0"
+    }
+  }
+}
 resource "docker_image" "postgres" {
   name = "postgres:15"
 }
