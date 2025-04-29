@@ -1,11 +1,12 @@
 terraform {
   required_providers {
     docker = {
-      source  = "hashicorp/docker"
-      version = "~> 3.0"
+      source = "kreuzwerker/docker"
+      version = "3.0.2"
     }
   }
 }
+
 resource "docker_image" "postgres" {
   name = "postgres:15"
 }
